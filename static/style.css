@@ -1,0 +1,2096 @@
+/* ==========================================================
+   GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* ====================================================== */
+/* Whole Dashboard Background */
+/* ====================================================== */
+
+/* =====================================================
+   Dashboard Background
+===================================================== */
+
+body{
+
+    margin:0;
+    padding:0;
+
+    font-family:'Poppins',sans-serif;
+
+    color:#ffffff;
+
+    background:
+    linear-gradient(
+        rgba(15,23,42,.82),
+        rgba(15,23,42,.82)
+    ),
+    url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    background-repeat:no-repeat;
+
+}
+
+
+/* ==========================================================
+   NAVIGATION BAR
+========================================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#0f172a;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 70px;
+
+    z-index:1000;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.25);
+
+}
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.logo i{
+
+    color:#38bdf8;
+
+    margin-right:10px;
+
+}
+
+.navbar ul{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.navbar ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.navbar ul li a:hover{
+
+    color:#38bdf8;
+
+}
+
+
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:100px 30px;
+
+    color:white;
+
+    background:transparent;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    font-size:54px;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    margin-bottom:40px;
+
+    color:#e5e7eb;
+
+}
+
+/* ==========================================================
+   HERO BUTTON (Dashboard Only)
+========================================================== */
+
+.hero-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#ffffff;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+    box-shadow:0 12px 30px rgba(37,99,235,.35);
+
+    transition:all .35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Shine Effect */
+
+.hero-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transition:.7s;
+
+}
+
+.hero-button:hover::before{
+
+    left:130%;
+
+}
+
+.hero-button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.45);
+
+    background:linear-gradient(135deg,#1d4ed8,#2563eb);
+
+}
+
+.hero-button:active{
+
+    transform:scale(.98);
+
+}
+
+.hero-button i{
+
+    transition:.35s ease;
+
+}
+
+.hero-button:hover i{
+
+    transform:translateX(6px);
+
+}
+
+
+/* ==========================================================
+   MAIN CONTAINER
+========================================================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 25px;
+
+}
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.title h1{
+
+    font-size:40px;
+
+    color:#0f172a;
+
+    margin-bottom:12px;
+
+}
+
+.title p{
+
+    color:#555;
+
+    font-size:18px;
+
+}
+/* ==========================================================
+   FORM CARDS
+========================================================== */
+
+.card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================================
+   SECTION HEADINGS
+========================================================== */
+
+.card h2{
+
+    font-size:26px;
+
+    color:#0f172a;
+
+    margin-bottom:30px;
+
+    padding-bottom:12px;
+
+    border-bottom:2px solid #e5e7eb;
+
+}
+
+.card h2 i{
+
+    color:#2563eb;
+
+    margin-right:10px;
+
+}
+
+
+/* ==========================================================
+   GRID LAYOUT
+========================================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+
+/* ==========================================================
+   INPUT GROUP
+========================================================== */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#334155;
+
+    margin-bottom:8px;
+
+}
+
+
+/* ==========================================================
+   INPUTS & SELECTS
+========================================================== */
+
+.input-group input,
+
+.input-group select{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    font-size:15px;
+
+    border:2px solid #d1d5db;
+
+    border-radius:10px;
+
+    background:#fff;
+
+    outline:none;
+
+    transition:all .3s ease;
+
+}
+
+
+.input-group input:focus,
+
+.input-group select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 10px rgba(37,99,235,.20);
+
+}
+
+
+.input-group input::placeholder{
+
+    color:#9ca3af;
+
+}
+
+
+/* ==========================================================
+   DROPDOWN
+========================================================== */
+
+select{
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   ABOUT CARD
+========================================================== */
+
+.about-text{
+
+    font-size:16px;
+
+    color:#475569;
+
+    margin-bottom:15px;
+
+    text-align:justify;
+
+    line-height:1.8;
+
+}
+/* =====================================================
+   ABOUT SECTION (Dashboard Only)
+===================================================== */
+
+.summary-card{
+
+    max-width:1000px;
+
+    margin:35px auto 0;
+
+    padding:40px;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:all .35s ease;
+
+}
+
+
+/* Top Accent Line */
+
+.summary-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+
+}
+
+
+/* Paragraph */
+
+.summary-card p{
+
+    font-size:16px;
+
+    color:#475569;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+    text-align:justify;
+
+}
+
+.summary-card p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* Hover Effect */
+
+.summary-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.18);
+
+}
+
+
+/* Floating Animation */
+
+.summary-card{
+
+    animation:summaryFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes summaryFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .summary-card{
+
+        padding:28px 22px;
+
+        margin-top:25px;
+
+    }
+
+    .summary-card p{
+
+        font-size:15px;
+
+        text-align:left;
+
+    }
+
+}
+
+
+/* ==========================================================
+   BUTTON SECTION
+========================================================== */
+
+.button-container{
+
+    text-align:center;
+
+    margin:50px 0;
+
+}
+
+.predict-btn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:18px 50px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.25);
+
+}
+
+.predict-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+.predict-btn i{
+
+    margin-right:10px;
+
+}
+
+
+/* ==========================================================
+   REQUIRED FIELD HIGHLIGHT
+========================================================== */
+
+input:required,
+
+select:required{
+
+    background:#ffffff;
+
+}
+
+input:invalid,
+
+select:invalid{
+
+    border-color:#f59e0b;
+
+}
+
+input:valid,
+
+select:valid{
+
+    border-color:#22c55e;
+
+}
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    background:#0f172a;
+
+    color:#ffffff;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    margin-top:70px;
+
+}
+
+footer h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:#cbd5e1;
+
+    font-size:15px;
+
+    margin:8px 0;
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#e2e8f0;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+/* ==========================================================
+   FADE-IN ANIMATION
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+@media(max-width:992px){
+
+    .navbar{
+
+        padding:18px 35px;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+    .title h1{
+
+        font-size:34px;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px;
+
+    }
+
+    .navbar ul{
+
+        gap:20px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        padding:120px 20px 80px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .hero-btn{
+
+        padding:14px 30px;
+
+        font-size:16px;
+
+    }
+
+    .container{
+
+        padding:60px 15px;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    .card h2{
+
+        font-size:22px;
+
+    }
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .predict-btn{
+
+        width:100%;
+
+        font-size:17px;
+
+        padding:16px;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .title h1{
+
+        font-size:28px;
+
+    }
+
+    .title p{
+
+        font-size:15px;
+
+    }
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   HOVER EFFECTS
+========================================================== */
+
+input:hover,
+
+select:hover{
+
+    border-color:#60a5fa;
+
+}
+
+.predict-btn:active{
+
+    transform:scale(.98);
+
+}
+
+.hero-btn:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ==========================================================
+   REMOVE NUMBER INPUT ARROWS
+========================================================== */
+
+input[type=number]::-webkit-inner-spin-button,
+
+input[type=number]::-webkit-outer-spin-button{
+
+    -webkit-appearance:none;
+
+    margin:0;
+
+}
+
+input[type=number]{
+
+    -moz-appearance:textfield;
+
+}
+
+
+/* ==========================================================
+   SMOOTH TRANSITIONS
+========================================================== */
+
+*{
+
+    transition:
+
+    background .3s,
+
+    color .3s,
+
+    border-color .3s,
+
+    box-shadow .3s,
+
+    transform .3s;
+
+}
+/* ==========================================================
+   RESULT PAGE
+========================================================== */
+
+.result-card{
+
+    text-align:center;
+
+    padding:50px;
+
+}
+
+.result-icon{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:0 auto 30px;
+
+    font-size:65px;
+
+}
+
+.success{
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+}
+
+.failure{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.success-text{
+
+    color:#16a34a;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.failure-text{
+
+    color:#dc2626;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.result-message{
+
+    font-size:18px;
+
+    color:#475569;
+
+    line-height:1.8;
+
+    max-width:800px;
+
+    margin:0 auto 40px;
+
+}
+
+/* ==========================================================
+   CONFIDENCE BOX
+========================================================== */
+
+.confidence-box{
+
+    margin:40px auto;
+
+    max-width:700px;
+
+    text-align:center;
+
+}
+
+.confidence-box h3{
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+    color:#0f172a;
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:18px;
+
+    background:#e2e8f0;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-bottom:20px;
+
+}
+
+.progress{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#2563eb,#38bdf8);
+
+    border-radius:50px;
+
+    transition:width 1.2s ease;
+
+}
+
+.confidence-box h2{
+
+    font-size:40px;
+
+    color:#2563eb;
+
+}
+
+/* ==========================================================
+   NOTE CARD
+========================================================== */
+
+.note-card{
+
+    margin-top:45px;
+
+    background:#eff6ff;
+
+    border-left:6px solid #2563eb;
+
+}
+
+.note-card h3{
+
+    color:#1d4ed8;
+
+    margin-bottom:15px;
+
+}
+
+.note-card h3 i{
+
+    margin-right:10px;
+
+}
+
+.note-card p{
+
+    font-size:16px;
+
+    color:#475569;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.button-container{
+
+    margin-top:45px;
+
+    text-align:center;
+
+}
+
+.button-container a{
+
+    text-decoration:none;
+
+    display:inline-block;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .result-card{
+
+        padding:30px 20px;
+
+    }
+
+    .result-icon{
+
+        width:90px;
+
+        height:90px;
+
+        font-size:50px;
+
+    }
+
+    .success-text,
+
+    .failure-text{
+
+        font-size:28px;
+
+    }
+
+    .result-message{
+
+        font-size:16px;
+
+    }
+
+    .confidence-box h2{
+
+        font-size:30px;
+
+    }
+
+}
+/* ==========================================================
+   REASONS
+========================================================== */
+
+.reason-list{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.reason-list li{
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+    color:#334155;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================================
+   RECOMMENDATION
+========================================================== */
+
+.recommendation-card{
+
+    margin-top:30px;
+
+    background:#f8fafc;
+
+    border-left:6px solid #2563eb;
+
+}
+
+.recommendation-card h3{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.recommendation-card p{
+
+    font-size:17px;
+
+    color:#475569;
+
+    line-height:1.8;
+
+}
+/* =====================================================
+   FEATURE SECTION
+===================================================== */
+
+/* =====================================================
+   FEATURE SECTION (Dashboard Only)
+===================================================== */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:28px;
+
+    margin-top:30px;
+
+}
+
+.feature-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:35px 28px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:all .35s ease;
+
+}
+
+
+/* Blue top border */
+
+.feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(90deg,#2563eb,#38bdf8);
+
+}
+
+
+/* Icon */
+
+.feature-card i{
+
+    width:75px;
+
+    height:75px;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:32px;
+
+    color:#ffffff;
+
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+    transition:all .35s ease;
+
+}
+
+
+/* Heading */
+
+.feature-card h3{
+
+    font-size:22px;
+
+    color:#1e293b;
+
+    margin-bottom:15px;
+
+}
+
+
+/* Description */
+
+.feature-card p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+/* Hover */
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.20);
+
+}
+
+.feature-card:hover i{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+
+/* Floating animation */
+
+.feature-card{
+
+    animation:featureFloat 5s ease-in-out infinite;
+
+}
+
+.feature-card:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.feature-card:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+.feature-card:nth-child(4){
+
+    animation-delay:1.5s;
+
+}
+
+.feature-card:nth-child(5){
+
+    animation-delay:2s;
+
+}
+
+.feature-card:nth-child(6){
+
+    animation-delay:2.5s;
+
+}
+
+@keyframes featureFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .feature-grid{
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+
+    }
+
+    .feature-card{
+
+        padding:28px 22px;
+
+    }
+
+    .feature-card h3{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/* =====================================================
+   TEAM SECTION
+===================================================== */
+
+
+/* =====================================================
+   TEAM SECTION (Dashboard Only)
+===================================================== */
+
+.team-box{
+
+    width:100%;
+
+    max-width:620px;
+
+    margin:35px auto 0;
+
+    padding:35px;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+
+    transition:all .35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* Blue Top Border */
+
+.team-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+
+}
+
+
+/* Floating Animation */
+
+.team-box{
+
+    animation:teamFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes teamFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Hover */
+
+.team-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.18);
+
+}
+
+
+/* =====================================================
+   TEAM HEADER
+===================================================== */
+
+.team-header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:28px;
+
+}
+
+.team-header i{
+
+    font-size:30px;
+
+    color:#2563eb;
+
+}
+
+.team-header h3{
+
+    color:#1e293b;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   TEAM MEMBER ROW
+===================================================== */
+
+.team-member{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 18px;
+
+    margin-bottom:14px;
+
+    border-radius:14px;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    transition:all .3s ease;
+
+}
+
+.team-member:last-child{
+
+    margin-bottom:0;
+
+}
+
+.team-member:hover{
+
+    transform:translateX(6px);
+
+    background:#eff6ff;
+
+    border-color:#93c5fd;
+
+}
+
+
+/* =====================================================
+   MEMBER ROLE
+===================================================== */
+
+.member-role{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#2563eb;
+
+}
+
+
+/* =====================================================
+   MEMBER NAME
+===================================================== */
+
+.member-name{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#1e293b;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .team-box{
+
+        padding:25px 20px;
+
+    }
+
+    .team-member{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:6px;
+
+    }
+
+    .team-header h3{
+
+        font-size:22px;
+
+    }
+
+}
+.avatar{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:35px;
+
+    margin-bottom:18px;
+
+}
+
+.team-card h3{
+
+    color:#1e293b;
+
+    margin-bottom:8px;
+
+}
+
+.team-card p{
+
+    color:#64748b;
+
+}
+/* =====================================================
+   CALL TO ACTION (Dashboard Only)
+===================================================== */
+
+.cta-box{
+
+    max-width:1000px;
+
+    margin:20px auto 0;
+
+    padding:60px 45px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+
+    border-radius:24px;
+
+    color:#ffffff;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(15,23,42,.25);
+
+    transition:all .35s ease;
+
+}
+
+
+/* Decorative Glow */
+
+.cta-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-120px;
+
+    right:-80px;
+
+}
+
+.cta-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(56,189,248,.15);
+
+    bottom:-80px;
+
+    left:-60px;
+
+}
+
+
+/* Hover */
+
+.cta-box:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 22px 45px rgba(15,23,42,.35);
+
+}
+
+
+/* Heading */
+
+.cta-box h2{
+
+    color:#ffffff;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* Paragraph */
+
+.cta-box p{
+
+    max-width:720px;
+
+    margin:0 auto 35px;
+
+    color:#dbeafe;
+
+    line-height:1.8;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* =====================================================
+   APPLY BUTTON
+===================================================== */
+
+.apply-btn-large{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+    background:#ffffff;
+
+    border-radius:50px;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.20);
+
+    transition:all .35s ease;
+
+    position:relative;
+
+    z-index:2;
+
+    overflow:hidden;
+
+}
+
+
+/* Shine Animation */
+
+.apply-btn-large::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.7),
+        transparent
+    );
+
+    transition:.7s;
+
+}
+
+.apply-btn-large:hover::before{
+
+    left:140%;
+
+}
+
+
+/* Hover */
+
+.apply-btn-large:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.35);
+
+}
+
+.apply-btn-large i{
+
+    transition:.35s;
+
+}
+
+.apply-btn-large:hover i{
+
+    transform:translateX(5px);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .cta-box{
+
+        padding:40px 25px;
+
+    }
+
+    .cta-box h2{
+
+        font-size:28px;
+
+    }
+
+    .cta-box p{
+
+        font-size:15px;
+
+    }
+
+    .apply-btn-large{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+.section{
+
+    background:transparent;
+
+}
