@@ -298,6 +298,7 @@ def predict():
         approval_probability = float(probabilities[1])
 
         rejection_probability = float(probabilities[0])
+        
 
         # ----------------------------------------------------
         # Generate Decision
@@ -310,7 +311,6 @@ def predict():
             result = "Credit Card Approved ✅"
 
             confidence = round(min(max(approval_probability * 100, 80), 99), 2)
-
             ml_reasons.append("Applicant passed all eligibility rules.")
 
             if years_employed >= 5:

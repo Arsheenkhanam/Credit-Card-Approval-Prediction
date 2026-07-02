@@ -77,7 +77,7 @@ the credit card approval decision.
 
 </div>
 
-<form action="/predict" method="POST">
+<form id="predictionForm"action="/predict" method="POST">
 
 <!-- ===================================================== -->
 <!-- Applicant Information -->
@@ -119,8 +119,7 @@ Applicant Information
 type="number"
 name="AGE"
 placeholder="Example : 30"
-min="18"
-max="100"
+
 required>
 
 </div>
@@ -417,6 +416,7 @@ Contact Information
 <select name="FLAG_MOBIL" required>
 
 <option value="1">Yes</option>
+<option value="0">No</option>
 
 </select>
 
@@ -554,6 +554,32 @@ Developed for Educational Purposes
 </p>
 
 </footer>
+<script>
+document.getElementById("predictionForm").addEventListener("submit", function(event) {
+
+    const age = parseInt(document.querySelector('input[name="AGE"]').value);
+
+    if (age < 18) {
+        alert("Applicant must be at least 18 years old.");
+        event.preventDefault();
+        return;
+    }
+
+    if (age > 100) {
+        alert("Age cannot be greater than 100.");
+        event.preventDefault();
+        return;
+    }
+
+});
+
+document.querySelectorAll('input[type="number"]').forEach(function(input) {
+    input.addEventListener('wheel', function(event) {
+        event.preventDefault();
+    }, { passive: false });
+});
+
+</script>
 
 </body>
 
